@@ -18,10 +18,51 @@ int main()
     vector<vector<int>> m2(r,vector<int>(c));
     //result vector of dimension of m*c
     vector<vector<int>> res(m,vector<int>(c));
-
+    
     if(n==r)
     {
+        cout<<"Enter the Elements of M1: "<<endl;
+        //input for first matrix
+        for (int i = 0; i < m; i++)
+        {
+            for (int j = 0; j < n;j++)
+            {
+                cin>>m1[i][j];
+            }
+        }
+        cout<<"Enter the Elements of M2: "<<endl;
+        //input for second matrix
+        for (int i = 0; i < r; i++)
+        {
+            for (int j = 0; j < c;j++)
+            {
+                cin>>m2[i][j];
+            }
+        }
+        
         cout<<"Multiplication is possible "<<endl;
+        for (int i = 0; i < m; i++)
+        {
+            for (int j = 0; j < c; j++)
+            {
+                 for (int k = 0; k < n; k++)
+                 {
+                    res[i][j]+=m1[i][k]*m2[k][j];
+                 }
+                 
+            } 
+        }
+        cout<<"Result: "<<endl;
+        for (int i = 0; i < m; i++)
+        {
+            for (int j = 0; j< c; j++)
+            {
+                cout<<res[i][j]<<" ";
+            }
+            cout<<endl;
+        }
+        
+        
     }
     else{
         cout<<"Multiplication is not possible"<<endl;
