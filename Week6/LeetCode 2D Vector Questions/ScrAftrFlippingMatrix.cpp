@@ -58,8 +58,4 @@ int main()
         total+=sum;
     }
     cout<<total;
-    
-
-
-
 }
