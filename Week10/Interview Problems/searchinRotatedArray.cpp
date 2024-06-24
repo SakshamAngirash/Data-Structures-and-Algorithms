@@ -4,6 +4,7 @@ public:
         int n = nums.size();
         int low = 0;
         int high = n - 1;
+
         int pivot = -1;
 
         // Special case for array of size 2
@@ -16,7 +17,7 @@ public:
         // Finding the pivot
         while (low <= high) {
             int mid = low + (high - low) / 2;
-            // Avoid out-of-bounds by checking if mid is at the ends
+            // Avoid out-of-bounds by checking if mid is at the ends  
             if (mid == 0) {
                 low = mid + 1;
             } else if (mid == n - 1) {
@@ -47,6 +48,7 @@ public:
             }
             return -1;
         }
+    
 
         // Binary search in the correct subarray
         if (target >= nums[0] && target <= nums[pivot - 1]) {
