@@ -19,6 +19,5 @@ int main ()
     A a; 
     B b; 
     b.b_public=10;
-    b.a_protective=10;
     // Important  note : we can only move from low to hight security .
 }
