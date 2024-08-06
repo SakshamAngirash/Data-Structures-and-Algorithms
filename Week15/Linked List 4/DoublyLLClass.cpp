@@ -129,7 +129,7 @@ class DLL{
                 temp=temp->next;
             }
             return temp->val;
-            
+            //we can also optimise this as we already knwo the size
         }
     }
 
