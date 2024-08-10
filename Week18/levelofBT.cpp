@@ -26,11 +26,10 @@ int sumTreeNode(Node* root)
     int ans = root->val+sumTreeNode(root->left)+sumTreeNode(root->right);
     return ans;
 }
-int MaxNode(Node* root)
+int level(Node* root)
 {
-    if(root==NULL)return INT_MIN; //use of negative infi in case of negative vals
-    return max(root->val,max(MaxNode(root->left),MaxNode(root->right)));
-    
+    if(root==NULL) return 0 ; 
+    return 1 + max(level(root->left),level(root->right));
 }
 int main()
 {
@@ -49,7 +48,7 @@ int main()
     c->right=g;
     displayTree(a);
     cout<<endl<<sumTreeNode(a)<<endl;
-    cout<<MaxNode(a);
+    cout<<level(a);
     return 0 ; 
 
 }
