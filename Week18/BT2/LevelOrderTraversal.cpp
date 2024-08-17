@@ -13,33 +13,28 @@ class Node{
         this->right=NULL; 
     }
 };
-//preorder
-// void display(Node* root)
-// {
-//     if(root==NULL)return; 
-//     cout<<root->val<<" "; 
-//     display(root->left);
-//     display(root->right);
-// }
-// void display(Node* root)
-// {
-//     if(root==NULL)return; 
-     
-//     display(root->left);
-//     display(root->right);
-//     cout<<root->val<<" ";
-// }
-void display(Node* root)
+int levels(Node* root)
 {
-    if(root==NULL)return; 
-     
-    display(root->left);
-    cout<<root->val<<" ";8 
-
-    
-    display(root->right);
-    
+    if(root==NULL) return 0; 
+    return 1+max(levels(root->left),levels(root->right));
 }
+void nthlevel(Node* root, int current , int level)
+{
+    if(root==NULL) return ; 
+    if(current==level) cout<<root->val<<" "; 
+    nthlevel(root->left,current+1,level);
+    nthlevel(root->right,current+1,level);
+   
+}
+void levelOrder(Node* root)
+{
+    int n = levels(root);
+    for (int i = 0; i <= n; i++)
+    {
+        nthlevel(root,1,i);
+    }
+}
+
 int main(){
     Node* a = new Node(1);
     Node* b = new Node(2);
@@ -58,7 +53,6 @@ int main(){
     c->left = f;
     c->right=g;
 
-
-    display(a);
+    levelOrder(a);
 
 }
