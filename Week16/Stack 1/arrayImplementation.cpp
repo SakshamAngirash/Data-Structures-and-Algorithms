@@ -34,12 +34,7 @@ class Stack{ //user defined data structure
     {
         return idx+1; 
     }
-    
-
-
-
 };
-
 int main()
 {
     Stack st; 

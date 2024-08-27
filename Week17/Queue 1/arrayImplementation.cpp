@@ -17,7 +17,8 @@ class queue{
     }
     void push(int val)
     {
-        if(size>5) cout<<"Overflow"; 
+        
+         cout<<"Overflow"; 
         else {
         arr[back]=val; 
         back++;
