@@ -1,5 +1,4 @@
-#include<iostream>
-
+\#include<iostream>
 using namespace std; 
 
 class Node{ //this is a tree node
@@ -13,11 +12,14 @@ class Node{ //this is a tree node
         this->left = NULL; 
         this->right = NULL;
     }
-}; 
-int maxinTree(Node* root)
+};
+ 
+void displayTree(Node* root) 
 {
-    if(root==NULL) INT_MIN;
-    return max(root->val,max(maxinTree(root->left),maxinTree(root->right)));
+    if(root==NULL) return ; 
+    cout<<root->val<<endl; 
+    displayTree(root->left); 
+    displayTree(root->right);
 }
 int main()
 {
@@ -34,7 +36,7 @@ int main()
     b->right= e; 
     c->left=f; 
     c->right=g;
-    cout<<maxinTree(a);
+    displayTree(a);
     return 0 ; 
 
 }

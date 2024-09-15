@@ -8,7 +8,6 @@ int main()
     s.insert(5); 
     s.insert(3); 
     s.insert(4); 
-
     for(auto ele: s)
     {
         cout<<ele<<" ";
