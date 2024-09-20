@@ -34,7 +34,7 @@ public:
             else if(root->left != NULL && root->right != NULL) {
                 // replace the root with its inorder predecessor
                 TreeNode* pred = iop(root);
-                root->val = pred->val;
+                root->val = pre8d->val;
                 root->left = deleteNode(root->left, pred->val);
             }
         } else if(root->val > key) {
