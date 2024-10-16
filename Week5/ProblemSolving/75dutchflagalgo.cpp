@@ -23,7 +23,7 @@ int main()
     {
         if(v[mid]==0)
         {
-            v[low]=0;
+            swap(v[low],v[mid]);
             mid++;
             low++;
         }

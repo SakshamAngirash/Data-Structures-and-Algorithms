@@ -7,7 +7,7 @@ int main ()
     // p.first = 1 ; 
     // p.second = 5; 
     // cout<<p.first<<" "<<p.second;
-    unordered_map<string, int> mp; 
+    unordered_map <string, int> mp; 
     //key : value 
     //we cannot directly insert into map , we need a pair for the same 
     pair<string,int> p ; 
@@ -54,11 +54,7 @@ int main ()
     cout<<endl;
     //DELETION : ONLY USING THE KEY 
     mp.erase("Suvrt");
-    for(auto ele : mp)
-    {
-        cout<<ele.first<<" "<<ele.second<<endl;
-    }
-
+ 
     
 
 
