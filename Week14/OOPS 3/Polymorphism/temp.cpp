@@ -4,7 +4,7 @@ using namespace std;
 class A{
     public:
     int a;
-    virtual void show()
+    void show()
     {
         cout<<"A ka show"; 
     } 
@@ -13,7 +13,7 @@ class A{
 class B : public A{
     public: 
     int b; 
-    virtual void show()
+    void show()
     {
         cout<<"B ka show";
     }
@@ -21,14 +21,10 @@ class B : public A{
 }; 
 int main()
 {
-    A *a;
+    A a; 
     B b; 
-    a = &b;
+    b.show();
 
-    b.show(); // normally b will be called
-    b.A::show(); //using scope resolution operator
-    a->show();//virtual function 
-    
 
     return 0;
 }

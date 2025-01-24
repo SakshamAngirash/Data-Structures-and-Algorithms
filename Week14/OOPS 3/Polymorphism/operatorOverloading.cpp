@@ -8,6 +8,7 @@ class ComplexNumber{
         ComplexNumber c3; 
         c3.img = c1.img + this->img; 
         c3.real = c1.real+this->real; 
+        cout<<c1.real;
         return c3;
     }
 }; 

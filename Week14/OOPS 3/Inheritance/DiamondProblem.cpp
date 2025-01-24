@@ -68,7 +68,7 @@ class C :virtual public A{
     }
 
 }; 
-class D : public B , public C {
+class D : public C , public B {
     public:
     D()
     {

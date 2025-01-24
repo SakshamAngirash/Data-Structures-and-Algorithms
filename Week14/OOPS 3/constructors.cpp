@@ -22,7 +22,7 @@ class Bike{
     int tyreSize; 
     int engineSize;
     //default constructor
-    Bike (int tyreSize,int engineSize=100) { //fgiving default value
+    Bike (int tyreSize=10,int engineSize=100) { //fgiving default value
         this->tyreSize = tyreSize;
         this->engineSize=engineSize;
         cout<<"constructor is called "; 
